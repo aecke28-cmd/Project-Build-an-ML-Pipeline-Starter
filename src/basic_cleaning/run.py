@@ -16,7 +16,6 @@ def go(args):
 
     run = wandb.init(job_type="basic_cleaning")
     run.config.update(args)
-
     # Download input artifact. This will also log that this script is using this
     
     run = wandb.init(project="nyc_airbnb", group="cleaning", save_code=True)
@@ -47,6 +46,7 @@ def go(args):
  )
     artifact.add_file("clean_sample.csv")
     run.log_artifact(artifact)
+
 
 
 # TODO: In the code below, fill in the data type for each argument. The data type should be str, float or int. 
